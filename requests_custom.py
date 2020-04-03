@@ -63,6 +63,9 @@ class RequestsCustom:
         # Show retry configuracion. Join list of ints.
         print(f"Backoff factor: {', '.join(map(str,self._get_backoff()))}")
         # Set debug.
+        # Initialize attributes.
+        self.debug_simple = debug_simple
+        self.debug_full   = debug_full
         # Only activate one type of debug.
         if debug_simple is True:
             self._set_debug_simple()
