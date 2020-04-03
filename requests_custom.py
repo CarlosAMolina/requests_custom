@@ -61,7 +61,8 @@ class RequestsCustom:
                                  429, 500, 502, 503, 504]
         self.TIMEOUT_DEFAULT = 5
         # Show retry configuracion. Join list of ints.
-        print(f"Backoff factor: {', '.join(map(str,self._get_backoff()))}")
+        print("RequestsCustom backoff factor"
+              f": {', '.join(map(str,self._get_backoff()))}")
         # Set debug.
         # Initialize attributes.
         self.debug_simple = debug_simple
