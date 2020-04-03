@@ -33,7 +33,7 @@ source env/bin/activate
 Install requirements:
 
 ~~~
-pip install -r requirements.txt
+/bin/bash install_pip -p $(pwd)
 ~~~
 
 Test the module:
