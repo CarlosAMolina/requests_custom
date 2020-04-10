@@ -22,5 +22,5 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     python_requires='>=3.6',
     url="https://github.com/carlosamolina/requests_custom",
-    version="0.0.2",
+    version="0.0.3",
 )
