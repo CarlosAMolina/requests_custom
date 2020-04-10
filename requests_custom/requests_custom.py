@@ -1,15 +1,15 @@
 """
-Python 3.6+
+Python 3 >= 3.6
 Module to work with custom requests capabilities.
 References: see README.md.
 """
 
-import requests
-from requests_toolbelt.utils import dump
-import http
-import sys
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
+from requests_toolbelt.utils import dump
+import http
+import requests
+import sys
 
 class TimeoutHTTPAdapter(HTTPAdapter):
     """ Setting default timeouts.
