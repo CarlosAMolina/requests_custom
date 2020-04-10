@@ -9,7 +9,7 @@ Current capabilities configured:
 # Install package
 
 ~~~
-pip install requests__custom
+pip install requests_custom
 ~~~
 
 # References
