@@ -6,10 +6,18 @@ Current capabilities configured:
 - Raise exception with certain HTTP status code responses.
 - Retry on failure.
 
-# Install package
+# Installation
 
 ~~~
 pip install requests_custom
+~~~
+
+# How to use
+
+~~~
+from requests_custom import requests_custom
+requests_custom = requests_custom.RequestsCustom(debug_full = True).get_requests()
+requests_custom.get('https://duckduckgo.com')
 ~~~
 
 # References
