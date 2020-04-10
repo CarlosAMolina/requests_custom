@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="requests_custom",
-    version="0.0.1",
+    version="0.0.2",
     author="Carlos A Molina",
     description="Python's requests with custom configuration",
     long_description=long_description,
