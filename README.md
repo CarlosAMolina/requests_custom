@@ -16,7 +16,7 @@ pip install requests_custom
 
 ~~~
 from requests_custom import requests_custom
-requests = requests_custom.RequestsCustom(debug_full = True).get_requests()
+requests = requests_custom.RequestsCustom(debug_full=True).get_requests()
 requests.get('https://duckduckgo.com')
 ~~~
 
