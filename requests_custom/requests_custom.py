@@ -207,45 +207,5 @@ class RequestsCustom:
         return http
 
 
-class Test:
-    """Class to check this module
-
-    Tests URLS explained at https://httpstat.us/.
-
-    Attributes
-    ----------
-    URL : str
-        URL to request with GET.
-    URL_DELAY : str
-        The response waits X miliseconds until be sent.
-    URL_TIMEOUT : str
-        URL to get a timeout response.
-
-    """
-
-    URL_DELAY = "https://httpstat.us/200?sleep=7000"
-    URL_TIMEOUT = "https://httpstat.us/408"
-    URL = "https://duckduckgo.com"
-
-    def __init__(self):
-        # Show modules logs.
-        import logging
-
-        # Format: https://docs.python.org/3/library/logging.html
-        logging.basicConfig(
-            format=(
-                "%(asctime)s"
-                " - %(funcName)s - %(levelname)s"
-                " - %(message)s"
-            ),
-            level=logging.DEBUG,
-        )
-
-    def get_url(self):
-        """Test to request an URL."""
-        requests_custom = RequestsCustom(debug_full=True).get_requests()
-        requests_custom.get(self.URL)
-
-
 if __name__ == "__main__":
-    Test().get_url()
+    print(__doc__)
