@@ -1,6 +1,6 @@
-This file shows how to work with the module without install it with pip.
+## Work with the module without install it with pip.
 
-# Requirements
+### Requirements
 
 - Python 3 >= 3.6
 
@@ -10,7 +10,7 @@ This file shows how to work with the module without install it with pip.
 sudo apt-get install python3-venv
 ~~~
 
-# Run
+### Run
 
 Create a virtual environment:
 
@@ -27,7 +27,7 @@ source env/bin/activate
 Install requirements:
 
 ~~~
-/bin/bash install_pip -p $(pwd)
+pip install ../requirements.txt
 ~~~
 
 Test the module:

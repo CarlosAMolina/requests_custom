@@ -3,6 +3,9 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+with open("requirements.txt", "r") as f:
+    requirements = f.read().splitlines()
+
 setuptools.setup(
     author="Carlos A Molina",
     classifiers=[
@@ -14,8 +17,7 @@ setuptools.setup(
     ],
     description="Python's requests with custom configuration",
     include_package_data=True,
-    install_requires=["requests == 2.23.0",
-                      "requests-toolbelt == 0.9.1",],
+    install_requires=requirements,
     long_description_content_type="text/markdown",
     long_description=long_description,
     name="requests_custom",

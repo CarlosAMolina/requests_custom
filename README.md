@@ -6,13 +6,13 @@ Current capabilities configured:
 - Raise exception with certain HTTP status code responses.
 - Retry on failure.
 
-# Installation
+## Installation
 
 ~~~
 pip install requests_custom
 ~~~
 
-# How to use
+## How to use
 
 ~~~
 from requests_custom import requests_custom
@@ -20,6 +20,6 @@ requests = requests_custom.RequestsCustom(debug_full = True).get_requests()
 requests.get('https://duckduckgo.com')
 ~~~
 
-# References
+## References
 
 https://findwork.dev/blog/advanced-usage-python-requests-timeouts-retries-hooks/
