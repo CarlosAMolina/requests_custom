@@ -28,7 +28,7 @@ class TestRequestsCustom(unittest.TestCase):
 
     def test_get(self):
         """Test to request an URL."""
-        requests_custom = RequestsCustom(debug_full=False).get_requests()
+        requests_custom = RequestsCustom(debug_simple=True).get_requests()
         requests_custom.get(self.URL)
 
 
