@@ -2,10 +2,6 @@
 
 Python 3 >= 3.6
 
-References
-----------
-See main README.md.
-
 """
 
 import http
@@ -67,6 +63,7 @@ class RequestsCustom:
     """Apply desired modifications to the module requests.
 
     Current capabilities configured:
+
     - Custom timeout for all requests.
     - Raise exception with certain HTTP status code responses.
     - Retry on failure.

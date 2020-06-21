@@ -1,6 +1,6 @@
 Module to work with custom requests capabilities.
 
-Current capabilities configured:
+Current capabilities available:
 
 - Custom timeout for all requests.
 - Raise exception with certain HTTP status code responses.

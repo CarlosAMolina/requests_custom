@@ -5,6 +5,8 @@ verify_ssl = true
 
 [dev-packages]
 black = ">=19.10b0"
+sphinx = "*"
+sphinx-rtd-theme = "*"
 
 [packages]
 requests = ">=2.23.0"
