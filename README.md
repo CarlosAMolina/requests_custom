@@ -20,6 +20,8 @@ requests = requests_custom.RequestsCustom(debug_full=True).get_requests()
 requests.get('https://duckduckgo.com')
 ~~~
 
-## References
+## Documentation
 
-https://findwork.dev/blog/advanced-usage-python-requests-timeouts-retries-hooks/
+https://requests-custom.readthedocs.io/en/latest/
+
+At the previous link you can see the references of this project.
