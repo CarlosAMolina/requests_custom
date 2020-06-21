@@ -1,7 +1,7 @@
 # Python.
-build/
-env/
-dist/
+/build/
+/env/
+/dist/
 *.egg-info/
 *.pyc
 
