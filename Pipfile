@@ -7,6 +7,7 @@ verify_ssl = true
 black = ">=19.10b0"
 sphinx = "*"
 sphinx-rtd-theme = "*"
+twine = "*"
 
 [packages]
 requests = ">=2.23.0"

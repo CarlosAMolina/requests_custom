@@ -1,1 +1,4 @@
 black >= 19.10b0
+sphinx
+sphinx-rtd-theme
+twine

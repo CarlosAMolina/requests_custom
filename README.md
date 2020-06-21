@@ -1,4 +1,4 @@
-Module to work with custom requests capabilities.
+Package to work with custom requests capabilities.
 
 Current capabilities available:
 
@@ -11,6 +11,8 @@ Current capabilities available:
 ~~~
 pip install requests_custom
 ~~~
+
+Pypi link: https://pypi.org/project/requests-custom/
 
 ## How to use
 

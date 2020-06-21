@@ -22,7 +22,10 @@ setuptools.setup(
     long_description=long_description,
     name="requests_custom",
     packages=setuptools.find_packages(),
+    project_urls={
+        'Documentation': 'https://requests-custom.readthedocs.io',
+        'Source': 'https://github.com/carlosamolina/requests_custom',
+    },
     python_requires='>=3.6',
-    url="https://github.com/carlosamolina/requests_custom",
-    version="0.0.3",
+    version="0.0.4",
 )
