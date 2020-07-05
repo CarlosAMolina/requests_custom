@@ -17,7 +17,7 @@ import sys
 print(sys.path)
 #sys.path.insert(0, os.path.abspath('../../requests_custom'))
 sys.path.insert(0, os.path.abspath('../..'))
-print(sys.path)
+#print(sys.path)
 
 
 # -- Project information -----------------------------------------------------
