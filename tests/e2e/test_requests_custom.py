@@ -26,10 +26,11 @@ class TestRequestsCustom(unittest.TestCase):
     URL_TIMEOUT = "https://httpstat.us/408"
     URL = "https://duckduckgo.com"
 
-    def test_get(self):
+    def test_get_url(self):
         """Test to request an URL."""
         requests_custom = RequestsCustom(debug_simple=True).get_requests()
-        requests_custom.get(self.URL)
+        response = requests_custom.get(self.URL)
+        assert response.status_code == 200
 
 
 if __name__ == "__main__":
