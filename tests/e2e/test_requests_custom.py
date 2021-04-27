@@ -2,6 +2,7 @@
 
 import unittest
 
+from requests import exceptions
 from requests_custom.requests_custom import RequestsCustom
 
 
@@ -10,8 +11,6 @@ class TestRequestsCustom(unittest.TestCase):
 
     Attributes
     ----------
-    URL : str
-        URL to request with GET.
     URL_DELAY : str
         The response waits X miliseconds until be sent.
     URL_TIMEOUT : str
@@ -22,15 +21,26 @@ class TestRequestsCustom(unittest.TestCase):
 
     """
 
-    URL_DELAY = "https://httpstat.us/200?sleep=7000"
-    URL_TIMEOUT = "https://httpstat.us/408"
-    URL = "https://duckduckgo.com"
+    URL_DELAY = "https://httpstat.us/200?sleep=7000" # TODO test
 
-    def test_get_url(self):
-        """Test to request an URL."""
-        requests_custom = RequestsCustom(debug_simple=True).get_requests()
-        response = requests_custom.get(self.URL)
+    def setUp(self):
+        self.requests_custom = RequestsCustom(debug_simple=True).get_requests()
+
+    def test_get_url_with_a_correct_response(self):
+        URL = "https://duckduckgo.com"
+        response = self.requests_custom.get(URL)
         assert response.status_code == 200
+
+    def _test_get_url_with_a_timeout_response(self):
+        self.requests_custom.RETRY_ATTEMPTS = 2 # TODO not working
+        URL = "https://httpstat.us/408"
+        #TODO try:
+        #TODO     response = self.requests_custom.get(URL)
+        #TODO     assert False
+        #TODO except exceptions.RetryError:
+        #TODO     assert True
+        #TODO except:
+        #TODO     assert False
 
 
 if __name__ == "__main__":
