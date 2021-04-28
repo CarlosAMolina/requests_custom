@@ -109,11 +109,7 @@ class RequestsCustom:
         # Status 408: timeout.
         self.STATUS_FORCELIST = [408, 429, 500, 502, 503, 504]
         self.TIMEOUT_DEFAULT = 5
-        # Show retry configuracion. Join list of ints.
-        print(
-            "RequestsCustom backoff factor"
-            f": {', '.join(map(str,self._get_backoff()))}"
-        )
+        self._log_backoff_factor()
         # Set debug.
         # Initialize attributes.
         self.debug_simple = debug_simple
@@ -124,6 +120,32 @@ class RequestsCustom:
             self.debug_full = False
         elif debug_full is True:
             self.debug_full = True
+
+    def _log_backoff_factor(self):
+        print(
+            "RequestsCustom backoff factor"
+            f": {', '.join(map(str,self._get_backoff()))}"
+        )
+
+    def _get_backoff(self):
+        """Calculate the seconds to wait betweet attempt.
+
+        These values are calculated according with the class configuration.
+        For example 2 seconds means 1s, 2s, 4s... to wait between attempts.
+
+        Returns
+        -------
+        list of ints
+            Seconds to wait between each attempt.
+
+        ..https://urllib3.readthedocs.io/en/latest/reference/urllib3.util.html#module-urllib3.util.retry
+
+        """
+        return [
+            self.BACKOFF_FACTOR * (2 ** (attempt - 1))
+            for attempt in range(self.RETRY_ATTEMPTS)
+        ]
+
 
     def _set_debug_simple(self):
         """Debug requests and headers, no response body.
@@ -149,25 +171,6 @@ class RequestsCustom:
         """
         data = dump.dump_all(response)
         print(data.decode("utf-8"))
-
-    def _get_backoff(self):
-        """Calculate the seconds to wait betweet attempt.
-
-        These values are calculated according with the class configuration.
-        For example 2 seconds means 1s, 2s, 4s... to wait between attempts.
-
-        Returns
-        -------
-        list of ints
-            Seconds to wait between each attempt.
-
-        ..https://urllib3.readthedocs.io/en/latest/reference/urllib3.util.html#module-urllib3.util.retry
-
-        """
-        return [
-            self.BACKOFF_FACTOR * (2 ** (attempt - 1))
-            for attempt in range(self.RETRY_ATTEMPTS)
-        ]
 
     def get_requests(self):
         """Get custom request object.

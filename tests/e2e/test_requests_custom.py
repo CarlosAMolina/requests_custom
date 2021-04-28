@@ -1,5 +1,3 @@
-"""Module to test the requests_custom module."""
-
 import unittest
 
 from requests import exceptions
@@ -7,40 +5,60 @@ from requests_custom.requests_custom import RequestsCustom
 
 
 class TestRequestsCustom(unittest.TestCase):
-    """Main test class.
-
-    Attributes
-    ----------
-    URL_DELAY : str
-        The response waits X miliseconds until be sent.
-    URL_TIMEOUT : str
-        URL to get a timeout response.
+    """
 
     .. _URLs information
        https://httpstat.us/.
 
     """
 
-    URL_DELAY = "https://httpstat.us/200?sleep=7000" # TODO test
-
-    def setUp(self):
-        self.requests_custom = RequestsCustom(debug_simple=True).get_requests()
-
-    def test_get_url_with_a_correct_response(self):
+    def test_get_url_with_a_correct_response_works(self):
+        requests_custom = RequestsCustom(debug_simple=True).get_requests()
         URL = "https://duckduckgo.com"
-        response = self.requests_custom.get(URL)
-        assert response.status_code == 200
+        response = requests_custom.get(URL)
+        self.assertEqual(200, response.status_code)
 
-    def _test_get_url_with_a_timeout_response(self):
-        self.requests_custom.RETRY_ATTEMPTS = 2 # TODO not working
+    def test_get_url_with_a_timeout_response_raises_an_exception(self):
+        requests_custom = RequestsCustom(debug_simple=True)
+        requests_custom.RETRY_ATTEMPTS = 1
+        requests_custom.BACKOFF_FACTOR = 0
+        requests_custom._log_backoff_factor()
+        requests_custom = requests_custom.get_requests()
         URL = "https://httpstat.us/408"
-        #TODO try:
-        #TODO     response = self.requests_custom.get(URL)
-        #TODO     assert False
-        #TODO except exceptions.RetryError:
-        #TODO     assert True
-        #TODO except:
-        #TODO     assert False
+        try:
+            response = requests_custom.get(URL)
+            raise Exception("Expected RetryError exception not raised")
+        except exceptions.RetryError:
+            self.assertTrue(True)
+        except:
+            raise Exception("Unexpected exception")
+
+    def test_get_url_with_a_delayed_response_fails(self):
+        requests_custom = RequestsCustom(debug_simple=True)
+        requests_custom.RETRY_ATTEMPTS = 0
+        requests_custom.BACKOFF_FACTOR = 0
+        requests_custom.TIMEOUT_DEFAULT = 0.1
+        requests_custom._log_backoff_factor()
+        requests_custom = requests_custom.get_requests()
+        URL = "https://httpstat.us/200?sleep={miliseconds}".format(miliseconds=200)
+        try:
+            response = requests_custom.get(URL)
+            raise Exception("Expected RetryError exception not raised")
+        except exceptions.ConnectionError:
+            self.assertTrue(True)
+        except:
+            raise Exception("Unexpected exception")
+
+    def test_get_url_with_a_delayed_response_works(self):
+        requests_custom = RequestsCustom(debug_simple=True)
+        requests_custom.RETRY_ATTEMPTS = 0
+        requests_custom.BACKOFF_FACTOR = 0
+        requests_custom.TIMEOUT_DEFAULT = 0.6
+        requests_custom._log_backoff_factor()
+        requests_custom = requests_custom.get_requests()
+        URL = "https://httpstat.us/200?sleep={miliseconds}".format(miliseconds=100)
+        response = requests_custom.get(URL)
+        self.assertEqual(200, response.status_code)
 
 
 if __name__ == "__main__":
