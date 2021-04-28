@@ -5,7 +5,6 @@ Python 3 >= 3.6
 """
 
 import http
-import sys
 
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
@@ -146,7 +145,6 @@ class RequestsCustom:
             for attempt in range(self.RETRY_ATTEMPTS)
         ]
 
-
     def _set_debug_simple(self):
         """Debug requests and headers, no response body.
 
@@ -199,9 +197,7 @@ class RequestsCustom:
             backoff_factor=self.BACKOFF_FACTOR,
         )
         # Mount it for both http and https usage
-        adapter = TimeoutHTTPAdapter(
-            timeout=self.TIMEOUT_DEFAULT, max_retries=retries
-        )
+        adapter = TimeoutHTTPAdapter(timeout=self.TIMEOUT_DEFAULT, max_retries=retries)
         http.mount("https://", adapter)
         http.mount("http://", adapter)
         return http

@@ -1,0 +1,4 @@
+# https://github.com/psf/black/blob/master/docs/the_black_code_style.md#line-length
+[flake8]
+max-line-length = 88
+extend-ignore = E203

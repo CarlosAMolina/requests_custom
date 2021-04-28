@@ -26,12 +26,10 @@ class TestRequestsCustom(unittest.TestCase):
         requests_custom = requests_custom.get_requests()
         URL = "https://httpstat.us/408"
         try:
-            response = requests_custom.get(URL)
+            requests_custom.get(URL)
             raise Exception("Expected RetryError exception not raised")
         except exceptions.RetryError:
             self.assertTrue(True)
-        except:
-            raise Exception("Unexpected exception")
 
     def test_get_url_with_a_delayed_response_fails(self):
         requests_custom = RequestsCustom(debug_simple=True)
@@ -42,18 +40,16 @@ class TestRequestsCustom(unittest.TestCase):
         requests_custom = requests_custom.get_requests()
         URL = "https://httpstat.us/200?sleep={miliseconds}".format(miliseconds=200)
         try:
-            response = requests_custom.get(URL)
+            requests_custom.get(URL)
             raise Exception("Expected RetryError exception not raised")
         except exceptions.ConnectionError:
             self.assertTrue(True)
-        except:
-            raise Exception("Unexpected exception")
 
     def test_get_url_with_a_delayed_response_works(self):
         requests_custom = RequestsCustom(debug_simple=True)
         requests_custom.RETRY_ATTEMPTS = 0
         requests_custom.BACKOFF_FACTOR = 0
-        requests_custom.TIMEOUT_DEFAULT = 0.6
+        requests_custom.TIMEOUT_DEFAULT = 1
         requests_custom._log_backoff_factor()
         requests_custom = requests_custom.get_requests()
         URL = "https://httpstat.us/200?sleep={miliseconds}".format(miliseconds=100)
