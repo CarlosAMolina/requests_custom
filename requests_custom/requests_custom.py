@@ -18,7 +18,7 @@ class TimeoutHTTPAdapter(HTTPAdapter):
 
     Attributes
     ----------
-    TIMEOUT_DEFAULT : int
+    TIMEOUT_DEFAULT : int or float
         Timeout to use at all requests. Seconds.
 
     Parameters
@@ -83,7 +83,7 @@ class RequestsCustom:
         Total number of retry attempts to make.
     STATUS_FORCELIST
         HTTP response codes to retry on.
-    TIMEOUT_DEFAULT : int
+    TIMEOUT_DEFAULT : int or float
         Timeout to use at all requests. Seconds.
 
     Parameters
