@@ -27,3 +27,8 @@ requests.get('https://duckduckgo.com')
 https://requests-custom.readthedocs.io/en/latest/
 
 At the previous link you can see the references of this project.
+
+## Development
+
+1. Activate pipenv and install the requirements.
+2. Run `tox`.

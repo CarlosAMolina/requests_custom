@@ -1,6 +1,0 @@
-black >= 19.10b0
-pre-commit
-sphinx
-sphinx-rtd-theme
-tox
-twine
