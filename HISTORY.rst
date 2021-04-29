@@ -1,6 +1,16 @@
 Release History
 ===============
 
+0.0.5 (2021-04-29)
+-------------------
+
+**Improvements**
+
+- Development: use pre-commit and tox.
+- Docs: change argument type, add development section.
+- Refactor: apply black and flake8, extract function and other small changes.
+- Tests: unittest and end to end tests.
+
 0.0.4 (2020-06-21)
 -------------------
 
