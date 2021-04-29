@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>requests_custom package &mdash; requests_custom 0.0.3 documentation</title>
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -29,7 +32,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -51,7 +53,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> requests_custom
+            <a href="index.html" class="icon icon-home"> requests_custom
           
 
           
@@ -90,6 +92,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
 </ul>
 
             
@@ -130,6 +133,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -141,7 +146,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/requests_custom.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -163,7 +168,7 @@
 <p>Python 3 &gt;= 3.6</p>
 <dl class="py class">
 <dt id="requests_custom.requests_custom.RequestsCustom">
-<em class="property">class </em><code class="sig-prename descclassname">requests_custom.requests_custom.</code><code class="sig-name descname">RequestsCustom</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">debug_simple</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">debug_full</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">requests_custom.requests_custom.</span></code><code class="sig-name descname"><span class="pre">RequestsCustom</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug_simple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_full</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Apply desired modifications to the module requests.</p>
 <p>Current capabilities configured:</p>
@@ -174,7 +179,7 @@
 </ul>
 <dl class="py attribute">
 <dt id="requests_custom.requests_custom.RequestsCustom.BACKOFF_FACTOR">
-<code class="sig-name descname">BACKOFF_FACTOR</code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.BACKOFF_FACTOR" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">BACKOFF_FACTOR</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.BACKOFF_FACTOR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Seconds to sleep between failed request,
 after the second try, see _get_backoff function.</p>
 <dl class="field-list simple">
@@ -186,7 +191,7 @@ after the second try, see _get_backoff function.</p>
 
 <dl class="py attribute">
 <dt id="requests_custom.requests_custom.RequestsCustom.debug_full">
-<code class="sig-name descname">debug_full</code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.debug_full" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">debug_full</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.debug_full" title="Permalink to this definition">¶</a></dt>
 <dd><p>Activate debug the entire HTTP lifecycle.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -197,7 +202,7 @@ after the second try, see _get_backoff function.</p>
 
 <dl class="py attribute">
 <dt id="requests_custom.requests_custom.RequestsCustom.debug_simple">
-<code class="sig-name descname">debug_simple</code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.debug_simple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">debug_simple</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.debug_simple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Debug the requests with less information, see _set_debug_simple().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -208,7 +213,7 @@ after the second try, see _get_backoff function.</p>
 
 <dl class="py attribute">
 <dt id="requests_custom.requests_custom.RequestsCustom.METHOD_WHITELIST">
-<code class="sig-name descname">METHOD_WHITELIST</code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.METHOD_WHITELIST" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">METHOD_WHITELIST</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.METHOD_WHITELIST" title="Permalink to this definition">¶</a></dt>
 <dd><p>HTTP methods to retry on. POST not included by default.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -219,7 +224,7 @@ after the second try, see _get_backoff function.</p>
 
 <dl class="py attribute">
 <dt id="requests_custom.requests_custom.RequestsCustom.RETRY_ATTEMPTS">
-<code class="sig-name descname">RETRY_ATTEMPTS</code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.RETRY_ATTEMPTS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">RETRY_ATTEMPTS</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.RETRY_ATTEMPTS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Total number of retry attempts to make.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -230,13 +235,13 @@ after the second try, see _get_backoff function.</p>
 
 <dl class="py attribute">
 <dt id="requests_custom.requests_custom.RequestsCustom.STATUS_FORCELIST">
-<code class="sig-name descname">STATUS_FORCELIST</code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.STATUS_FORCELIST" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">STATUS_FORCELIST</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.STATUS_FORCELIST" title="Permalink to this definition">¶</a></dt>
 <dd><p>HTTP response codes to retry on.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="requests_custom.requests_custom.RequestsCustom.TIMEOUT_DEFAULT">
-<code class="sig-name descname">TIMEOUT_DEFAULT</code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.TIMEOUT_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">TIMEOUT_DEFAULT</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.TIMEOUT_DEFAULT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timeout to use at all requests. Seconds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -255,7 +260,7 @@ after the second try, see _get_backoff function.</p>
 </dl>
 <dl class="py method">
 <dt id="requests_custom.requests_custom.RequestsCustom.get_requests">
-<code class="sig-name descname">get_requests</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.get_requests" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_requests</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.get_requests" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get custom request object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -271,12 +276,12 @@ after the second try, see _get_backoff function.</p>
 
 <dl class="py class">
 <dt id="requests_custom.requests_custom.TimeoutHTTPAdapter">
-<em class="property">class </em><code class="sig-prename descclassname">requests_custom.requests_custom.</code><code class="sig-name descname">TimeoutHTTPAdapter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.TimeoutHTTPAdapter" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">requests_custom.requests_custom.</span></code><code class="sig-name descname"><span class="pre">TimeoutHTTPAdapter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.TimeoutHTTPAdapter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">requests.adapters.HTTPAdapter</span></code></p>
 <p>Setting default timeouts.</p>
 <dl class="py attribute">
 <dt id="requests_custom.requests_custom.TimeoutHTTPAdapter.TIMEOUT_DEFAULT">
-<code class="sig-name descname">TIMEOUT_DEFAULT</code><a class="headerlink" href="#requests_custom.requests_custom.TimeoutHTTPAdapter.TIMEOUT_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">TIMEOUT_DEFAULT</span></code><a class="headerlink" href="#requests_custom.requests_custom.TimeoutHTTPAdapter.TIMEOUT_DEFAULT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timeout to use at all requests. Seconds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -295,12 +300,12 @@ after the second try, see _get_backoff function.</p>
 </dl>
 <dl class="py attribute">
 <dt id="id0">
-<code class="sig-name descname">TIMEOUT_DEFAULT</code><em class="property"> = 5</em><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">TIMEOUT_DEFAULT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="requests_custom.requests_custom.TimeoutHTTPAdapter.send">
-<code class="sig-name descname">send</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.TimeoutHTTPAdapter.send" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">send</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.TimeoutHTTPAdapter.send" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use timeout at the requests.</p>
 <p>Overrides send() method to use the default timeout if no other
 provided.</p>
@@ -324,37 +329,29 @@ provided.</p>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, Carlos A Molina
+        &#169; Copyright 2020, Carlos A Molina.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

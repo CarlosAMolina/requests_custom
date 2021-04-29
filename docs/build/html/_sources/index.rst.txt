@@ -13,6 +13,7 @@ Welcome to requests_custom's documentation!
    intro
    requests_custom
    examples
+   development
 
 Indices and tables
 ==================
