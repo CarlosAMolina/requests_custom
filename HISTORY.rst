@@ -1,6 +1,14 @@
 Release History
 ===============
 
+0.0.6 (2023-03-12)
+-------------------
+
+**Improvements**
+
+- Docs: add command examples to the development section.
+- Requirements: update versions.
+
 0.0.5 (2021-04-29)
 -------------------
 
