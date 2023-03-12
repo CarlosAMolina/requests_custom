@@ -10,6 +10,7 @@ sphinx = "*"
 sphinx-rtd-theme = "*"
 tox = "*"
 twine = "*"
+pytest = "*"
 
 [packages]
 requests = ">=2.23.0"
