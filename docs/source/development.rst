@@ -7,7 +7,6 @@ Steps
 #. Download the project and change the working directory to it:
 
     .. code-block:: bash
-       :linenos:
 
        git clone git@github.com:CarlosAMolina/requests_custom
        cd requests_custom
@@ -15,7 +14,6 @@ Steps
 #. Activate pipenv and install the requirements:
 
     .. code-block:: bash
-       :linenos:
 
        python3.7 -m venv env
        source env/bin/activate
@@ -25,7 +23,6 @@ Steps
 #. Run tox:
 
     .. code-block:: bash
-       :linenos:
 
        tox
 
