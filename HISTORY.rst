@@ -1,6 +1,13 @@
 Release History
 ===============
 
+Unreleased (TODO)
+-------------------
+
+**Improvements**
+
+- Docs: add how to update docs.
+
 0.0.6 (2023-03-12)
 -------------------
 
