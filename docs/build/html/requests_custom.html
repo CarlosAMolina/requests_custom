@@ -1,174 +1,109 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>requests_custom package &mdash; requests_custom 0.0.3 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Examples" href="examples.html" />
     <link rel="prev" title="Introduction" href="intro.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="index.html" class="icon icon-home"> requests_custom
           
-
-          
+          <a href="index.html" class="icon icon-home">
+            requests_custom
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">requests_custom package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-requests_custom.requests_custom">requests_custom.requests_custom module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-requests_custom.requests_custom">requests_custom.requests_custom module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom"><code class="docutils literal notranslate"><span class="pre">RequestsCustom</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.BACKOFF_FACTOR"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.BACKOFF_FACTOR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.debug_full"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.debug_full</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.debug_simple"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.debug_simple</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.METHOD_WHITELIST"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.METHOD_WHITELIST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.RETRY_ATTEMPTS"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.RETRY_ATTEMPTS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.STATUS_FORCELIST"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.STATUS_FORCELIST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.TIMEOUT_DEFAULT"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.TIMEOUT_DEFAULT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.get_requests"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.get_requests()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#requests_custom.requests_custom.TimeoutHTTPAdapter"><code class="docutils literal notranslate"><span class="pre">TimeoutHTTPAdapter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.TimeoutHTTPAdapter.TIMEOUT_DEFAULT"><code class="docutils literal notranslate"><span class="pre">TimeoutHTTPAdapter.TIMEOUT_DEFAULT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">TimeoutHTTPAdapter.TIMEOUT_DEFAULT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.TimeoutHTTPAdapter.send"><code class="docutils literal notranslate"><span class="pre">TimeoutHTTPAdapter.send()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">requests_custom</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>requests_custom package</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">requests_custom package</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/requests_custom.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="requests-custom-package">
-<h1>requests_custom package<a class="headerlink" href="#requests-custom-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="module-requests_custom.requests_custom">
-<span id="requests-custom-requests-custom-module"></span><h2>requests_custom.requests_custom module<a class="headerlink" href="#module-requests_custom.requests_custom" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="requests-custom-package">
+<h1>requests_custom package<a class="headerlink" href="#requests-custom-package" title="Permalink to this heading"></a></h1>
+<section id="module-requests_custom.requests_custom">
+<span id="requests-custom-requests-custom-module"></span><h2>requests_custom.requests_custom module<a class="headerlink" href="#module-requests_custom.requests_custom" title="Permalink to this heading"></a></h2>
 <p>Module to work with custom requests capabilities.</p>
 <p>Python 3 &gt;= 3.6</p>
 <dl class="py class">
-<dt id="requests_custom.requests_custom.RequestsCustom">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">requests_custom.requests_custom.</span></code><code class="sig-name descname"><span class="pre">RequestsCustom</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug_simple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_full</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.RequestsCustom">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">requests_custom.requests_custom.</span></span><span class="sig-name descname"><span class="pre">RequestsCustom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug_simple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_full</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Apply desired modifications to the module requests.</p>
 <p>Current capabilities configured:</p>
@@ -178,80 +113,80 @@
 <li><p>Retry on failure.</p></li>
 </ul>
 <dl class="py attribute">
-<dt id="requests_custom.requests_custom.RequestsCustom.BACKOFF_FACTOR">
-<code class="sig-name descname"><span class="pre">BACKOFF_FACTOR</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.BACKOFF_FACTOR" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.RequestsCustom.BACKOFF_FACTOR">
+<span class="sig-name descname"><span class="pre">BACKOFF_FACTOR</span></span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.BACKOFF_FACTOR" title="Permalink to this definition"></a></dt>
 <dd><p>Seconds to sleep between failed request,
 after the second try, see _get_backoff function.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="requests_custom.requests_custom.RequestsCustom.debug_full">
-<code class="sig-name descname"><span class="pre">debug_full</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.debug_full" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.RequestsCustom.debug_full">
+<span class="sig-name descname"><span class="pre">debug_full</span></span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.debug_full" title="Permalink to this definition"></a></dt>
 <dd><p>Activate debug the entire HTTP lifecycle.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="requests_custom.requests_custom.RequestsCustom.debug_simple">
-<code class="sig-name descname"><span class="pre">debug_simple</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.debug_simple" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.RequestsCustom.debug_simple">
+<span class="sig-name descname"><span class="pre">debug_simple</span></span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.debug_simple" title="Permalink to this definition"></a></dt>
 <dd><p>Debug the requests with less information, see _set_debug_simple().</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="requests_custom.requests_custom.RequestsCustom.METHOD_WHITELIST">
-<code class="sig-name descname"><span class="pre">METHOD_WHITELIST</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.METHOD_WHITELIST" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.RequestsCustom.METHOD_WHITELIST">
+<span class="sig-name descname"><span class="pre">METHOD_WHITELIST</span></span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.METHOD_WHITELIST" title="Permalink to this definition"></a></dt>
 <dd><p>HTTP methods to retry on. POST not included by default.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list of strs</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="requests_custom.requests_custom.RequestsCustom.RETRY_ATTEMPTS">
-<code class="sig-name descname"><span class="pre">RETRY_ATTEMPTS</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.RETRY_ATTEMPTS" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.RequestsCustom.RETRY_ATTEMPTS">
+<span class="sig-name descname"><span class="pre">RETRY_ATTEMPTS</span></span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.RETRY_ATTEMPTS" title="Permalink to this definition"></a></dt>
 <dd><p>Total number of retry attempts to make.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="requests_custom.requests_custom.RequestsCustom.STATUS_FORCELIST">
-<code class="sig-name descname"><span class="pre">STATUS_FORCELIST</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.STATUS_FORCELIST" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.RequestsCustom.STATUS_FORCELIST">
+<span class="sig-name descname"><span class="pre">STATUS_FORCELIST</span></span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.STATUS_FORCELIST" title="Permalink to this definition"></a></dt>
 <dd><p>HTTP response codes to retry on.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="requests_custom.requests_custom.RequestsCustom.TIMEOUT_DEFAULT">
-<code class="sig-name descname"><span class="pre">TIMEOUT_DEFAULT</span></code><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.TIMEOUT_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.RequestsCustom.TIMEOUT_DEFAULT">
+<span class="sig-name descname"><span class="pre">TIMEOUT_DEFAULT</span></span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.TIMEOUT_DEFAULT" title="Permalink to this definition"></a></dt>
 <dd><p>Timeout to use at all requests. Seconds.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int or float</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>debug_simple</strong> – See the attribute with the same name.</p></li>
 <li><p><strong>debug_full</strong> – See the attribute with the same name.</p></li>
@@ -259,15 +194,12 @@ after the second try, see _get_backoff function.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="requests_custom.requests_custom.RequestsCustom.get_requests">
-<code class="sig-name descname"><span class="pre">get_requests</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.get_requests" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.RequestsCustom.get_requests">
+<span class="sig-name descname"><span class="pre">get_requests</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.get_requests" title="Permalink to this definition"></a></dt>
 <dd><p>Get custom request object.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>request object</p>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>request object</p>
 </dd>
 </dl>
 </dd></dl>
@@ -275,23 +207,23 @@ after the second try, see _get_backoff function.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="requests_custom.requests_custom.TimeoutHTTPAdapter">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">requests_custom.requests_custom.</span></code><code class="sig-name descname"><span class="pre">TimeoutHTTPAdapter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.TimeoutHTTPAdapter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">requests.adapters.HTTPAdapter</span></code></p>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.TimeoutHTTPAdapter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">requests_custom.requests_custom.</span></span><span class="sig-name descname"><span class="pre">TimeoutHTTPAdapter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.TimeoutHTTPAdapter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPAdapter</span></code></p>
 <p>Setting default timeouts.</p>
 <dl class="py attribute">
-<dt id="requests_custom.requests_custom.TimeoutHTTPAdapter.TIMEOUT_DEFAULT">
-<code class="sig-name descname"><span class="pre">TIMEOUT_DEFAULT</span></code><a class="headerlink" href="#requests_custom.requests_custom.TimeoutHTTPAdapter.TIMEOUT_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.TimeoutHTTPAdapter.TIMEOUT_DEFAULT">
+<span class="sig-name descname"><span class="pre">TIMEOUT_DEFAULT</span></span><a class="headerlink" href="#requests_custom.requests_custom.TimeoutHTTPAdapter.TIMEOUT_DEFAULT" title="Permalink to this definition"></a></dt>
 <dd><p>Timeout to use at all requests. Seconds.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int or float</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>*args</strong> – Variable length argument list.</p></li>
 <li><p><strong>**kwargs</strong> – Arbitrary keyword arguments.</p></li>
@@ -299,18 +231,18 @@ after the second try, see _get_backoff function.</p>
 </dd>
 </dl>
 <dl class="py attribute">
-<dt id="id0">
-<code class="sig-name descname"><span class="pre">TIMEOUT_DEFAULT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">TIMEOUT_DEFAULT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="requests_custom.requests_custom.TimeoutHTTPAdapter.send">
-<code class="sig-name descname"><span class="pre">send</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.TimeoutHTTPAdapter.send" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.TimeoutHTTPAdapter.send">
+<span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#requests_custom.requests_custom.TimeoutHTTPAdapter.send" title="Permalink to this definition"></a></dt>
 <dd><p>Use timeout at the requests.</p>
 <p>Overrides send() method to use the default timeout if no other
 provided.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>request</strong> – </p></li>
 <li><p><strong>**kwargs</strong> – Arbitrary keyword arguments.</p></li>
@@ -321,55 +253,38 @@ provided.</p>
 
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Carlos A Molina.
-
-    </p>
+    <p>&#169; Copyright 2020, Carlos A Molina.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
