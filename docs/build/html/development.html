@@ -47,6 +47,7 @@
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#steps">Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-docs">Update docs</a></li>
 </ul>
 </li>
 </ul>
@@ -105,6 +106,27 @@ pipenv<span class="w"> </span>install<span class="w"> </span>pytest<span class="
 </div>
 </div></blockquote>
 </li>
+</ol>
+</section>
+<section id="update-docs">
+<h2>Update docs<a class="headerlink" href="#update-docs" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Modify the files with the documentation to be updated.</p></li>
+<li><p>Update docs configuration files:</p>
+<ul class="simple">
+<li><p>docs/source/conf.py: update the <cite>release</cite> value.</p></li>
+</ul>
+</li>
+<li><p>Generate documentation:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>env/bin/activate
+<span class="nb">cd</span><span class="w"> </span>docs
+make<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>html
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Push changes.</p></li>
 </ol>
 </section>
 </section>

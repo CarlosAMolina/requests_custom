@@ -26,3 +26,21 @@ Steps
 
        tox
 
+Update docs
+***********
+
+#. Modify the files with the documentation to be updated.
+
+#. Update docs configuration files:
+
+   - docs/source/conf.py: update the `release` value.
+
+#. Generate documentation:
+
+    .. code-block:: bash
+
+       source env/bin/activate
+       cd docs
+       make clean && make html
+
+#. Push changes.
