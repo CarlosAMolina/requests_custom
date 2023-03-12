@@ -23,11 +23,11 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- Project information -----------------------------------------------------
 
 project = 'requests_custom'
-copyright = '2020, Carlos A Molina'
+copyright = '2023, Carlos A Molina'
 author = 'Carlos A Molina'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.3'
+release = '0.0.4'
 
 
 # -- General configuration ---------------------------------------------------
