@@ -1,12 +1,13 @@
 Release History
 ===============
 
-Unreleased (TODO)
+0.0.7 (2023-12-22)
 -------------------
 
 **Improvements**
 
 - Docs: add how to update docs.
+- Read the Docs: add configuration file v2 .readthedocs.yaml.
 
 0.0.6 (2023-03-12)
 -------------------

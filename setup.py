@@ -27,5 +27,5 @@ setuptools.setup(
         "Source": "https://github.com/carlosamolina/requests_custom",
     },
     python_requires=">=3.6",
-    version="0.0.6",
+    version="0.0.7",
 )
