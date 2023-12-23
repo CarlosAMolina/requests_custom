@@ -7,8 +7,8 @@ Python 3 >= 3.6
 import http
 
 from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.util.retry import Retry
 from requests_toolbelt.utils import dump
+from urllib3.util.retry import Retry
 import requests
 
 
@@ -76,7 +76,7 @@ class RequestsCustom:
         Activate debug the entire HTTP lifecycle.
     debug_simple : bool
         Debug the requests with less information, see _set_debug_simple().
-    METHOD_WHITELIST : list of strs
+    ALLOWED_METHODS : list of strs
         HTTP methods to retry on. POST not included by default.
     RETRY_ATTEMPTS : int
         Total number of retry attempts to make.
@@ -96,7 +96,7 @@ class RequestsCustom:
 
     def __init__(self, debug_simple=False, debug_full=False):
         self.BACKOFF_FACTOR = 2
-        self.METHOD_WHITELIST = [
+        self.ALLOWED_METHODS = [
             "HEAD",
             "GET",
             "PUT",
@@ -193,7 +193,7 @@ class RequestsCustom:
         retries = Retry(
             total=self.RETRY_ATTEMPTS,
             status_forcelist=self.STATUS_FORCELIST,
-            method_whitelist=self.METHOD_WHITELIST,
+            allowed_methods=self.ALLOWED_METHODS,
             backoff_factor=self.BACKOFF_FACTOR,
         )
         # Mount it for both http and https usage
