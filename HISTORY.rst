@@ -1,6 +1,15 @@
 Release History
 ===============
 
+0.0.8 (2023-12-23)
+-------------------
+
+**Improvements**
+
+- Requirements: update to fix vulnerable versions.
+- Code: work with new libraries versions.
+
+
 0.0.7 (2023-12-22)
 -------------------
 
