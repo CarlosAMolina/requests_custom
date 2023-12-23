@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>requests_custom package &mdash; requests_custom 0.0.4 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -50,7 +54,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.BACKOFF_FACTOR"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.BACKOFF_FACTOR</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.debug_full"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.debug_full</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.debug_simple"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.debug_simple</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.METHOD_WHITELIST"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.METHOD_WHITELIST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.ALLOWED_METHODS"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.ALLOWED_METHODS</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.RETRY_ATTEMPTS"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.RETRY_ATTEMPTS</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.STATUS_FORCELIST"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.STATUS_FORCELIST</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#requests_custom.requests_custom.RequestsCustom.TIMEOUT_DEFAULT"><code class="docutils literal notranslate"><span class="pre">RequestsCustom.TIMEOUT_DEFAULT</span></code></a></li>
@@ -147,8 +151,8 @@ after the second try, see _get_backoff function.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="requests_custom.requests_custom.RequestsCustom.METHOD_WHITELIST">
-<span class="sig-name descname"><span class="pre">METHOD_WHITELIST</span></span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.METHOD_WHITELIST" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="requests_custom.requests_custom.RequestsCustom.ALLOWED_METHODS">
+<span class="sig-name descname"><span class="pre">ALLOWED_METHODS</span></span><a class="headerlink" href="#requests_custom.requests_custom.RequestsCustom.ALLOWED_METHODS" title="Permalink to this definition"></a></dt>
 <dd><p>HTTP methods to retry on. POST not included by default.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
